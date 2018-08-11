@@ -31,10 +31,10 @@ CustmerDetails CRUD Project
 	Use Partial class and DataAnnotations on Model for server side validation (similar to UI Form Validation)
 
 # Details on Server side coding :
-	3. Used Unity framework to resolve DI
-	4. Used Async and await to support multi threading.
-	5. Used soft delete
-	6. Used IQueryable and implemented IDispose pattern. 
+	1. Used Unity framework to resolve DI
+	2. Used Async and await to support multi threading.
+	3. Used soft delete
+	4. Used IQueryable and implemented IDispose pattern. 
 
 # Unit Test :
 	Wrote 6 unit test cases.
