@@ -1,0 +1,16 @@
+
+  .nav>li {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 100px;
+    border: 1px black;
+    font-style: oblique;
+    font-size: larger
+  }
+  ul.navbar-nav{
+    display: inline-block;
+    background-color: lightgray;
+  } 
+  .navbar{
+    padding: 0px;
+  }

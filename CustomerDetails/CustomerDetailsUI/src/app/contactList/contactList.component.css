@@ -1,0 +1,25 @@
+ table {
+    color: #369;
+    font-family: cursive;
+    font-size: large;
+    border-collapse: inherit;
+    padding:5px;
+    margin:5px;
+}
+
+/* td {
+    border: 1px dashed black;
+    padding: 5px;
+    margin: 5px;
+} */
+
+thead {
+    font-weight: bolder;
+    padding: 5px;
+    margin: 5px;
+} 
+
+addClass {
+    max-width: 200%;
+    float:none!important;display:inline
+}

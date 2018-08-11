@@ -1,0 +1,52 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <br/>
+        <h5>CustomerDetail Details</h5>
+        <br/>
+    </div>
+    <ShowAll *ngIf="_contactService._contactList.length > 0" [all]="getTotalContactsCount()" [active]="getTotalActiveContactsCount()"
+        [deactive]="getTotalDeActiveContactsCount()" (radioButtonChangedOutputEvent)="OnRadioButtonChange($event)">
+    </ShowAll>
+
+    <div class="panel-body">
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                    <td>PhoneNumber</td>
+                    <td>Status</td>
+                    <td colspan="2" style="text-align: center">
+                        <input type="button" class="btn btn-primary addClass " value="Add" (click)="addEditContact(0)" />
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="_contactService._contactList.length > 0">
+                    <ng-container *ngFor="let c of _contactService._contactList">
+                        <tr *ngIf="radioButtonSelectedValue == 'All' || radioButtonSelectedValue == c.IsActive">
+                            <td>{{c.FirstName}}</td>
+                            <td>{{c.LastName}}</td>
+                            <td>{{c.Email}}</td>
+                            <td>{{c.PhoneNumber}}</td>
+                            <td>{{c.IsActive == 1 ? 'Active' : 'Deactive'}}</td>
+                            <td>
+                                <input type="button" [disabled]="c.IsActive == 0" class="btn btn-info" value="Edit" (click)="addEditContact(c.CustomerId)"
+                                />
+                                <input type="button" [disabled]="c.IsActive == 0" class="btn btn-danger" value="Delete" (click)="removeContact(c.CustomerId)"
+                                />
+                            </td>
+                        </tr>
+                    </ng-container>
+                </ng-container>
+                <tr *ngIf="_contactService._contactList.length == 0">
+                    <td colspan="7">
+                        {{_contactService.statusMessage}}
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

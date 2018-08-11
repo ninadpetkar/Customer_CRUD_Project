@@ -1,0 +1,11 @@
+<div class="custom-control custom-radio">
+    <strong>Show : </strong>
+    <input class="radioClass" type="radio" name="options" value="All" [(ngModel)]="selectedValue" (change)="OnRadioButtonChange()"/>
+    <span class="spanClass">{{ "All ("+ all +")" }}</span>
+
+    <input type="radio" name="options" value="1" [(ngModel)]="selectedValue" (change)="OnRadioButtonChange()" />
+    <span class="spanClass">{{ "Active ("+ active +")" }}</span>
+
+    <input type="radio" name="options"  value="0" [(ngModel)]="selectedValue" (change)="OnRadioButtonChange()"/>
+    <span class="spanClass">{{ "Deactive ("+ deactive +")" }}</span>
+</div>
